@@ -1,0 +1,18 @@
+{
+    "manifest_version": 3,
+    "name": "Secure Password Manager",
+    "version": "1.0.0",
+    "description": "Browser interface for the Python Secure Password Manager.",
+    "permissions": [
+        "nativeMessaging",
+        "activeTab",
+        "scripting"
+    ],
+    "action": {
+        "default_title": "Secure Password Manager",
+        "default_popup": "popup.html"
+    },
+    "background": {
+        "service_worker": "background.js"
+    }
+}

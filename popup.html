@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>Secure Password Manager</title>
+
+    <style>
+
+        body {
+            width: 360px;
+            font-family: Arial, sans-serif;
+            padding: 15px;
+        }
+
+        h2 {
+            margin-top: 0;
+        }
+
+        button {
+            padding: 8px 12px;
+            margin: 4px;
+            cursor: pointer;
+        }
+
+        input {
+            padding: 8px;
+            box-sizing: border-box;
+        }
+
+        #search {
+            width: 100%;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        #status {
+            margin: 10px 0;
+            font-size: 13px;
+        }
+
+        .account {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-top: 8px;
+            border-radius: 5px;
+        }
+
+        .website {
+            font-weight: bold;
+            font-size: 15px;
+        }
+
+        .username {
+            font-size: 13px;
+            margin-top: 4px;
+        }
+
+        .category {
+            font-size: 12px;
+            margin-top: 4px;
+        }
+
+        #accounts {
+            max-height: 250px;
+            overflow-y: auto;
+        }
+
+        hr {
+            margin: 15px 0;
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+    <h2>🔐 Secure Password Manager</h2>
+
+    <p>Browser Extension</p>
+
+
+    <!-- ========================================= -->
+    <!-- CONNECTION -->
+    <!-- ========================================= -->
+
+    <button id="connectButton">
+        Connect to Password Manager
+    </button>
+
+    <p id="status">
+        Not connected
+    </p>
+
+
+    <hr>
+
+
+    <!-- ========================================= -->
+    <!-- SEARCH -->
+    <!-- ========================================= -->
+
+    <input
+        type="text"
+        id="search"
+        placeholder="Search accounts..."
+    >
+
+
+    <button id="loadAccountsButton">
+        Load Accounts
+    </button>
+
+
+    <div id="accounts"></div>
+
+
+    <hr>
+
+
+    <!-- ========================================= -->
+    <!-- PASSWORD GENERATOR -->
+    <!-- ========================================= -->
+
+    <button id="generateButton">
+        Generate Password
+    </button>
+
+    <br><br>
+
+    <input
+        type="text"
+        id="generatedPassword"
+        placeholder="Generated password"
+        readonly
+        style="width: 100%;"
+    >
+
+
+    <!-- ========================================= -->
+    <!-- JAVASCRIPT -->
+    <!-- ========================================= -->
+
+    <script src="popup.js"></script>
+
+</body>
+
+</html>
